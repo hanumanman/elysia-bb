@@ -3,13 +3,17 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "format": "prettier . --write",
+    "lint": "oxlint ."
   },
   "dependencies": {
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "oxlint": "^1.1.0",
+    "prettier": "^3.5.3"
   },
   "module": "src/index.js"
 }
