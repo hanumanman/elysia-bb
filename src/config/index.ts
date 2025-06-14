@@ -16,8 +16,7 @@ export const config = {
   api: {
     version: '1.0.0',
     title: 'Novel Reading API',
-    description:
-      'A scalable Elysia API for novel reading application with Vietnamese text support'
+    description: 'A scalable Elysia API for novel reading application'
   },
 
   cors: {

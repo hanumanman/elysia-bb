@@ -7,10 +7,6 @@ and architectural decisions for the hi-elysia project.
 
 - **`ARCHITECTURE.md`** - Current project architecture documentation with
   feature-based structure
-- **`MIGRATION.md`** - Migration guide from route-based to feature-based
-  architecture
-- **`RESTRUCTURING_SUMMARY.md`** - Summary of the completed restructuring
-  process
 
 ## Purpose
 
