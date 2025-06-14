@@ -11,4 +11,6 @@ const app = new Elysia()
   .listen(config.server.port)
 
 // oxlint-disable-next-line no-console
-console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`)
+console.log(
+  `📓 Blackbook backend is running at ${app.server?.hostname}:${app.server?.port}`
+)
