@@ -4,12 +4,13 @@
  */
 
 import 'dotenv/config'
+import { env } from './env'
 
 export const config = {
   server: {
-    port: Number(process.env.PORT) || 6969,
-    host: process.env.HOST || 'localhost',
-    environment: process.env.NODE_ENV || 'development'
+    port: env.PORT,
+    host: env.HOST,
+    environment: env.NODE_ENV
   },
 
   api: {
@@ -20,19 +21,23 @@ export const config = {
   },
 
   cors: {
-    origin: process.env.CORS_ORIGIN || '*',
-    credentials: process.env.CORS_CREDENTIALS === 'true'
+    origin: env.CORS_ORIGIN,
+    credentials: env.CORS_CREDENTIALS
   },
 
   database: {
-    url: process.env.DATABASE_URL || 'file:./dev.db',
-    authToken: process.env.DATABASE_AUTH_TOKEN
+    url: env.DATABASE_URL,
+    authToken: env.DATABASE_AUTH_TOKEN
   },
 
   security: {
-    jwtSecret: process.env.JWT_SECRET || 'development-secret-key',
-    bcryptRounds: Number(process.env.BCRYPT_ROUNDS) || 12
+    jwtSecret: env.JWT_SECRET || 'development-secret-key',
+    bcryptRounds: env.BCRYPT_ROUNDS
   }
 }
 
 export type Config = typeof config
+
+// Re-export env for direct access to environment variables when needed
+export { env } from './env'
+export type { Env } from './env'

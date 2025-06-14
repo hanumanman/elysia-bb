@@ -1,4 +1,5 @@
 import { Elysia, t } from 'elysia'
+import { config } from '../../../config'
 import { responseService } from '../../../shared/services'
 
 /**
@@ -15,7 +16,7 @@ export const healthController = new Elysia({ prefix: '/health' })
           status: 'healthy',
           timestamp: new Date().toISOString(),
           uptime: process.uptime(),
-          environment: process.env.NODE_ENV || 'development'
+          environment: config.server.environment
         },
         'Service is healthy'
       )

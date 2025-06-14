@@ -9,6 +9,7 @@
         "dotenv": "^16.5.0",
         "drizzle-orm": "^0.44.2",
         "elysia": "latest",
+        "zod": "^3.25.64",
       },
       "devDependencies": {
         "bun-types": "latest",
