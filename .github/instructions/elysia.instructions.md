@@ -9,7 +9,8 @@ applyTo: '**'
 
 ## After implementing new feature:
 
-- Add relevant tests.
-- Run the scripts to test, check type, linting and format to ensure everything is working.
-- Update the changelogs folder.
-- Update the ARCHITECTURE.md file if neccessary.
+1. Add relevant tests.
+2. Run the scripts to test, check type, linting and format to ensure everything is working.
+3. Update the changelogs folder.
+4. Update the ARCHITECTURE.md file if neccessary.
+5. Run lint check using `bun lint` command again to check lint error for updated md file.
