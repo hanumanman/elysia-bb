@@ -22,7 +22,7 @@ export const swaggerPlugin = new Elysia({ name: 'swagger' }).use(
     },
     scalarConfig: {
       layout: 'classic',
-      theme: 'purple'
+      theme: 'deepSpace'
     }
   })
 )
