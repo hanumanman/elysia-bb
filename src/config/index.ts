@@ -3,6 +3,8 @@
  * Centralized configuration management following best practices
  */
 
+import 'dotenv/config'
+
 export const config = {
   server: {
     port: Number(process.env.PORT) || 6969,
@@ -12,13 +14,24 @@ export const config = {
 
   api: {
     version: '1.0.0',
-    title: 'Elysia API',
-    description: 'A scalable Elysia API with feature-based architecture'
+    title: 'Novel Reading API',
+    description:
+      'A scalable Elysia API for novel reading application with Vietnamese text support'
   },
 
   cors: {
     origin: process.env.CORS_ORIGIN || '*',
     credentials: process.env.CORS_CREDENTIALS === 'true'
+  },
+
+  database: {
+    url: process.env.DATABASE_URL || 'file:./dev.db',
+    authToken: process.env.DATABASE_AUTH_TOKEN
+  },
+
+  security: {
+    jwtSecret: process.env.JWT_SECRET || 'development-secret-key',
+    bcryptRounds: Number(process.env.BCRYPT_ROUNDS) || 12
   }
 }
 

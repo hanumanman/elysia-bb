@@ -8,5 +8,6 @@ applyTo: '**'
 
 ## After implementing new feature:
 
+- Add relevant tests.
 - Run the scripts to test, check type, linting and format to ensure everything is working.
 - Update the changelogs folder.

@@ -4,3 +4,4 @@
  */
 export { healthController } from './health'
 export { noteController } from './notes'
+export { userController } from './users'
