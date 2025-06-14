@@ -1,4 +1,5 @@
 ---
+title: The Elysia doc
 url: /plugins/graphql-apollo.md
 ---
 
