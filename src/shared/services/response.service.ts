@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia'
-import type { ApiResponse, PaginatedResponse } from '../types'
+import type { ApiErrorResponse, ApiSuccessResponse, PaginatedResponse } from '../types'
 
 /**
  * Response service for standardized API responses
@@ -9,14 +9,19 @@ export const responseService = new Elysia({ name: 'response-service' }).derive(
   { as: 'global' },
   () => ({
     response: {
-      success: <T>(data: T, message?: string): ApiResponse<T> => ({
-        success: true,
+      success: <T>(data: T, message: string = 'Success'): ApiSuccessResponse<T> => ({
+        success: true as const,
         data,
         message
       }),
 
-      error: (error: string, message?: string): ApiResponse => ({
-        success: false,
+      successNoData: (message: string): { success: true; message: string } => ({
+        success: true as const,
+        message
+      }),
+
+      error: (error: string, message?: string): ApiErrorResponse => ({
+        success: false as const,
         error,
         message
       }),
@@ -27,8 +32,9 @@ export const responseService = new Elysia({ name: 'response-service' }).derive(
         limit: number,
         total: number
       ): PaginatedResponse<T> => ({
-        success: true,
+        success: true as const,
         data,
+        message: 'Data retrieved successfully',
         pagination: {
           page,
           limit,

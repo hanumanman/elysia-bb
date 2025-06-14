@@ -44,11 +44,13 @@ export const NoteModels = {
 
   'note.list.response': t.Object({
     success: t.Literal(true),
-    data: t.Ref('note.list')
+    data: t.Ref('note.list'),
+    message: t.String()
   }),
 
   'note.single.response': t.Object({
     success: t.Literal(true),
-    data: t.Ref('note.response')
+    data: t.Ref('note.response'),
+    message: t.String()
   })
 }

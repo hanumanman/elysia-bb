@@ -132,7 +132,7 @@ export const noteController = new Elysia({ prefix: '/notes' })
     async ({ noteService, response, params: { id } }) => {
       try {
         await noteService.deleteNote(id)
-        return response.success(null, 'Note deleted successfully')
+        return response.successNoData('Note deleted successfully')
       } catch (error) {
         if (error instanceof Error && error.message === 'Note not found') {
           return response.error('Note not found', 'The requested note does not exist')
