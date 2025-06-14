@@ -1,25 +1,13 @@
-import { swagger } from '@elysiajs/swagger'
 import { Elysia } from 'elysia'
-import { notePlugin } from './routes/notes/notes.index'
-
-const PORT = 6969
+import { config } from './config'
+import { healthController, noteController } from './features'
+import { swaggerPlugin } from './shared/plugins'
 
 const app = new Elysia()
-  .use(
-    swagger({
-      documentation: {
-        info: {
-          title: 'Elysia Documentation',
-          version: '1.0.0'
-        }
-      },
-      scalarConfig: {
-        layout: 'classic'
-      }
-    })
-  )
-  .use(notePlugin)
-  .listen(PORT)
+  .use(swaggerPlugin)
+  .use(healthController)
+  .use(noteController)
+  .listen(config.server.port)
 
 // oxlint-disable-next-line no-console
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`)
