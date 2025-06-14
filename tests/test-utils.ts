@@ -32,29 +32,3 @@ export async function parseJsonResponse(response: Response) {
     return text
   }
 }
-
-/**
- * Test data generators
- */
-export const testData = {
-  note: {
-    create: {
-      title: 'Test Note',
-      content: 'This is a test note content'
-    },
-    update: {
-      title: 'Updated Test Note',
-      content: 'This is updated test note content'
-    },
-    invalid: {
-      empty: {
-        title: '',
-        content: ''
-      },
-      noContent: {
-        title: 'Test Note',
-        content: ''
-      }
-    }
-  }
-}
