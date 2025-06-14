@@ -27,7 +27,12 @@ export const userController = new Elysia({ prefix: '/users' })
     {
       params: t.Object({
         id: t.String()
-      })
+      }),
+      detail: {
+        tags: ['users'],
+        summary: 'Get user by ID',
+        description: 'Retrieve a specific user by their ID (excludes sensitive data)'
+      }
     }
   )
 
@@ -52,7 +57,12 @@ export const userController = new Elysia({ prefix: '/users' })
         role: t.Optional(
           t.Union([t.Literal('reader'), t.Literal('author'), t.Literal('admin')])
         )
-      })
+      }),
+      detail: {
+        tags: ['users'],
+        summary: 'Create a new user',
+        description: 'Create a new user account with the provided information'
+      }
     }
   )
 
@@ -77,6 +87,12 @@ export const userController = new Elysia({ prefix: '/users' })
     {
       params: t.Object({
         email: t.String({ format: 'email' })
-      })
+      }),
+      detail: {
+        tags: ['users'],
+        summary: 'Get user by email',
+        description:
+          'Retrieve a specific user by their email address (excludes sensitive data)'
+      }
     }
   )

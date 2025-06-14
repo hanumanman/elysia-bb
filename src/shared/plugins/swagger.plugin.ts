@@ -16,8 +16,8 @@ export const swaggerPlugin = new Elysia({ name: 'swagger' }).use(
       },
       tags: [
         { name: 'health', description: 'Health check operations' },
-        { name: 'notes', description: 'Note management operations' }
-        // Add more tags as features are added
+        { name: 'novels', description: 'Novel management operations' },
+        { name: 'users', description: 'User management operations' }
       ]
     },
     scalarConfig: {
