@@ -2,13 +2,15 @@
 
 ## Summary of Changes
 
-This restructuring transforms your Elysia project from a simple route-based structure to a scalable, feature-based architecture following Elysia best practices.
+This restructuring transforms your Elysia project from a simple route-based
+structure to a scalable, feature-based architecture following Elysia best
+practices.
 
 ## Before vs After Structure
 
 ### Before (Old Structure)
 
-```
+```text
 src/
 ├── index.ts
 └── routes/
@@ -18,7 +20,7 @@ src/
 
 ### After (New Structure)
 
-```
+```text
 src/
 ├── index.ts
 ├── config/
@@ -54,7 +56,8 @@ src/
 ### 2. **Elysia Best Practices Implementation**
 
 - **Controllers**: Use Elysia instances as controllers (1 instance = 1 controller)
-- **Services**: Proper service pattern with Elysia instances for request-dependent logic
+- **Services**: Proper service pattern with Elysia instances for
+  request-dependent logic
 - **Models**: Reference models for type safety and OpenAPI generation
 - **Repositories**: Static classes for data access (non-request dependent)
 
@@ -126,10 +129,12 @@ src/
 ## Migration Steps Taken
 
 1. **Created shared utilities** - Common types, models, services, and plugins
-2. **Restructured notes feature** - Separated into proper layers (controller, service, repository, types, models)
+2. **Restructured notes feature** - Separated into proper layers (controller,
+   service, repository, types, models)
 3. **Added health feature** - Demonstrates the scalable structure
 4. **Updated main application** - Clean, simple entry point
-5. **Enhanced documentation** - Better API docs and architecture documentation
+5. **Enhanced documentation** - Better API docs and architecture
+   documentation
 
 ## Development Workflow
 

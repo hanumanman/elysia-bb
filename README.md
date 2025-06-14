@@ -1,6 +1,7 @@
 # Elysia with Feature-Based Architecture
 
-A scalable Elysia API server built with feature-based architecture following Elysia best practices.
+A scalable Elysia API server built with feature-based architecture following
+Elysia best practices.
 
 ## Features
 
@@ -27,7 +28,8 @@ To start the development server run:
 bun run dev
 ```
 
-Open http://localhost:6969/swagger with your browser to see the API documentation.
+Open <http://localhost:6969/swagger> with your browser to see the API
+documentation.
 
 ## API Endpoints
 
@@ -46,7 +48,7 @@ Open http://localhost:6969/swagger with your browser to see the API documentatio
 
 ## Project Structure
 
-```
+```text
 src/
 ├── config/                 # Application configuration
 ├── features/              # Feature-based modules

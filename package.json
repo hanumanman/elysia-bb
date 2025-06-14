@@ -6,7 +6,7 @@
     "test:watch": "bun test --watch",
     "dev": "bun run --watch src/index.ts",
     "format": "prettier . --write",
-    "lint": "oxlint .",
+    "lint": "oxlint . && markdownlint \"**/*.md\" --ignore node_modules",
     "type-check": "bun tsc --noEmit"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "bun-types": "latest",
+    "markdownlint-cli": "^0.45.0",
     "oxlint": "^1.1.0",
     "prettier": "^3.5.3"
   },

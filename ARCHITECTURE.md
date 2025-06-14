@@ -1,10 +1,11 @@
 # Elysia Feature-Based Architecture
 
-A scalable Elysia API server built with feature-based architecture following Elysia best practices.
+A scalable Elysia API server built with feature-based architecture following
+Elysia best practices.
 
 ## Project Structure
 
-```
+```text
 src/
 ├── config/                 # Application configuration
 │   └── index.ts
@@ -61,14 +62,14 @@ src/
 bun install
 ```
 
-2. Start development server:
+1. Start development server:
 
 ```bash
 bun run dev
 ```
 
-3. View API documentation:
-   Open http://localhost:6969/swagger
+1. View API documentation:
+   Open <http://localhost:6969/swagger>
 
 ## API Endpoints
 

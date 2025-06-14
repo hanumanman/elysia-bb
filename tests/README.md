@@ -1,10 +1,11 @@
 # Tests
 
-This directory contains comprehensive tests for the Elysia API project using Bun's built-in test runner.
+This directory contains comprehensive tests for the Elysia API project using
+Bun's built-in test runner.
 
 ## Test Structure
 
-```
+```text
 tests/
 ├── app.integration.test.ts          # Full application integration tests
 ├── test-utils.ts                    # Shared test utilities and helpers
@@ -99,15 +100,18 @@ Predefined test data for consistent testing across different test files.
 
 ### Elysia-Specific Behavior
 
-- **Validation Errors**: Elysia returns `422` status codes for validation errors, not `500`
+- **Validation Errors**: Elysia returns `422` status codes for validation
+  errors, not `500`
 - **Error Format**: Validation errors have `type: 'validation'` structure
-- **Response Structure**: Success responses don't include top-level `timestamp` fields
+- **Response Structure**: Success responses don't include top-level `timestamp`
+  fields
 
 ### Repository Testing
 
 - The `NoteRepository` uses in-memory storage with static methods
 - Tests may interact with shared state - consider this when writing new tests
-- Repository tests include timing-sensitive operations (like update timestamp validation)
+- Repository tests include timing-sensitive operations (like update timestamp
+  validation)
 
 ### Test Isolation
 
