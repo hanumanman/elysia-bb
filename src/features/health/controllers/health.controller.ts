@@ -1,6 +1,6 @@
+import { config } from '@/config'
+import { responseService } from '@/shared/services'
 import { Elysia, t } from 'elysia'
-import { config } from '../../../config'
-import { responseService } from '../../../shared/services'
 
 /**
  * Health check controller

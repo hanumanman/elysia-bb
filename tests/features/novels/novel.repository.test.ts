@@ -1,7 +1,7 @@
+import { categories, db, novels, tags, users } from '@/db'
+import { NovelRepository } from '@/features/novels'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
-import { categories, db, novels, tags, users } from '../../../src/db'
-import { NovelRepository } from '../../../src/features/novels/repositories/novel.repository'
 
 describe('NovelRepository', () => {
   let novelRepository: NovelRepository
@@ -12,8 +12,8 @@ describe('NovelRepository', () => {
   beforeEach(async () => {
     novelRepository = new NovelRepository()
 
-    // Clean up test data before each test
-    await db.delete(novels).where(eq(novels.title, 'Test Novel'))
+    // Clean up test data before each test - clean all test novels
+    await db.delete(novels)
     await db.delete(users).where(eq(users.email, 'author@example.com'))
     await db.delete(categories).where(eq(categories.name, 'Test Category'))
     await db.delete(tags).where(eq(tags.name, 'Test Tag'))

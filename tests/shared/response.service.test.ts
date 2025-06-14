@@ -1,6 +1,6 @@
+import { responseService } from '@/shared'
 import { describe, expect, it } from 'bun:test'
 import { Elysia } from 'elysia'
-import { responseService } from '../../src/shared/services/response.service'
 
 describe('Response Service', () => {
   // Initialize the response service in a test app

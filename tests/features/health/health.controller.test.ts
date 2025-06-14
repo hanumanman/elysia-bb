@@ -1,7 +1,7 @@
+import { healthController } from '@/features'
 import { describe, expect, it } from 'bun:test'
 import { Elysia } from 'elysia'
-import { healthController } from '../../../src/features/health/controllers/health.controller'
-import { parseJsonResponse, testRequest } from '../../test-utils'
+import { parseJsonResponse, testRequest } from 'tests/test-utils'
 
 describe('Health Controller', () => {
   const app = new Elysia().use(healthController)

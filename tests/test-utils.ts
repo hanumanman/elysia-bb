@@ -1,12 +1,4 @@
 /**
- * Test utilities for Elysia testing
- */
-
-/**
- * Test utilities for Elysia testing
- */
-
-/**
  * Helper to make test requests easier using Elysia's handle method
  */
 export async function testRequest(app: any, method: string, path: string, body?: any) {

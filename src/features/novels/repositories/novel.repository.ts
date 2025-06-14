@@ -1,4 +1,3 @@
-import { and, asc, count, desc, eq, inArray, isNull, like, or, sql } from 'drizzle-orm'
 import {
   categories,
   chapters,
@@ -9,7 +8,8 @@ import {
   tags,
   users,
   type Database
-} from '../../../db'
+} from '@/db'
+import { and, asc, count, desc, eq, inArray, isNull, like, or, sql } from 'drizzle-orm'
 
 export class NovelRepository {
   constructor(private database: Database = db) {}

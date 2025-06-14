@@ -1,6 +1,6 @@
+import { config } from '@/config'
 import { createClient } from '@libsql/client'
 import { drizzle } from 'drizzle-orm/libsql'
-import { config } from '../config'
 import * as relations from './relations'
 import * as schema from './schema'
 

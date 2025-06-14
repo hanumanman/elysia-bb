@@ -1,5 +1,9 @@
+import type {
+  ApiErrorResponse,
+  ApiSuccessResponse,
+  PaginatedResponse
+} from '@/shared/types'
 import { Elysia } from 'elysia'
-import type { ApiErrorResponse, ApiSuccessResponse, PaginatedResponse } from '../types'
 
 /**
  * Response service for standardized API responses

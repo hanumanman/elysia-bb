@@ -1,7 +1,7 @@
+import { db, users } from '@/db'
+import { UserService } from '@/features/users'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
-import { db, users } from '../../../src/db'
-import { UserService } from '../../../src/features/users/services/user.service'
 
 describe('UserService', () => {
   let userService: UserService

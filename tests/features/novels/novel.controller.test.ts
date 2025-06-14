@@ -1,8 +1,8 @@
+import { categories, db, novels, tags, users } from '@/db'
+import { novelController } from '@/features'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
 import { Elysia } from 'elysia'
-import { categories, db, novels, tags, users } from '../../../src/db'
-import { novelController } from '../../../src/features/novels/controllers/novel.controller'
 
 describe('NovelController', () => {
   let app: Elysia

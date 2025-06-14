@@ -1,7 +1,7 @@
+import { db, users } from '@/db'
+import { UserRepository } from '@/features/users'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
-import { db, users } from '../../../src/db'
-import { UserRepository } from '../../../src/features/users/repositories/user.repository'
 
 describe('UserRepository', () => {
   let userRepository: UserRepository

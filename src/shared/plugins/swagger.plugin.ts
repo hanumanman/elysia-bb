@@ -1,6 +1,6 @@
+import { config } from '@/config'
 import { swagger } from '@elysiajs/swagger'
 import { Elysia } from 'elysia'
-import { config } from '../../config'
 
 /**
  * Swagger configuration plugin

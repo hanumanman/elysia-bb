@@ -1,7 +1,7 @@
+import { config } from '@/config'
+import { healthController, novelController, userController } from '@/features'
+import { swaggerPlugin } from '@/shared/plugins'
 import { Elysia } from 'elysia'
-import { config } from './config'
-import { healthController, novelController, userController } from './features'
-import { swaggerPlugin } from './shared/plugins'
 
 const app = new Elysia()
   .use(swaggerPlugin)

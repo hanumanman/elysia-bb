@@ -1,4 +1,4 @@
-import { NovelRepository } from '../repositories/novel.repository'
+import { NovelRepository } from '@/features/novels/repositories/novel.repository'
 
 export class NovelService {
   private novelRepository: NovelRepository

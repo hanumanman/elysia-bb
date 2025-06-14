@@ -1,4 +1,4 @@
-import { UserRepository } from '../repositories/user.repository'
+import { UserRepository } from '@/features/users/repositories/user.repository'
 
 export class UserService {
   private userRepository: UserRepository

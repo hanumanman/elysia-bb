@@ -1,8 +1,8 @@
+import { db, users } from '@/db'
+import { userController } from '@/features'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
 import { Elysia } from 'elysia'
-import { db, users } from '../../../src/db'
-import { userController } from '../../../src/features/users/controllers/user.controller'
 
 describe('UserController', () => {
   let app: Elysia

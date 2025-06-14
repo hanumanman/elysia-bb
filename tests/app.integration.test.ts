@@ -1,7 +1,7 @@
+import { healthController } from '@/features'
+import { swaggerPlugin } from '@/shared'
 import { describe, expect, it } from 'bun:test'
 import { Elysia } from 'elysia'
-import { healthController } from '../src/features'
-import { swaggerPlugin } from '../src/shared/plugins'
 import { parseJsonResponse, testRequest } from './test-utils'
 
 describe('App Integration Tests', () => {

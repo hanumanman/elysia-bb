@@ -1,5 +1,5 @@
+import { db, users, type Database } from '@/db'
 import { and, eq, isNull } from 'drizzle-orm'
-import { db, users, type Database } from '../../../db'
 
 export class UserRepository {
   constructor(private database: Database = db) {}

@@ -1,7 +1,7 @@
+import { categories, db, novels, tags, users } from '@/db'
+import { NovelService } from '@/features/novels'
 import { beforeEach, describe, expect, it } from 'bun:test'
 import { eq } from 'drizzle-orm'
-import { categories, db, novels, tags, users } from '../../../src/db'
-import { NovelService } from '../../../src/features/novels/services/novel.service'
 
 describe('NovelService', () => {
   let novelService: NovelService

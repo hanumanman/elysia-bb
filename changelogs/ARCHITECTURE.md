@@ -22,11 +22,21 @@ src/
 │   │   └── index.ts
 │   ├── novels/           # Novel management feature
 │   │   ├── controllers/  # HTTP request handlers
+│   │   ├── routes/       # Modular route organization
+│   │   │   ├── novel.crud.routes.ts      # CRUD operations
+│   │   │   ├── novel.discovery.routes.ts # Content discovery
+│   │   │   ├── novel.search.routes.ts    # Search functionality
+│   │   │   ├── novel.author.routes.ts    # Author operations
+│   │   │   └── index.ts                  # Route barrel export
 │   │   ├── repositories/ # Data access layer
 │   │   ├── services/     # Business logic layer
 │   │   └── index.ts
 │   └── users/            # User management feature
 │       ├── controllers/  # HTTP request handlers
+│       ├── routes/       # Modular route organization
+│       │   ├── user.crud.routes.ts   # CRUD operations
+│       │   ├── user.lookup.routes.ts # Lookup operations
+│       │   └── index.ts              # Route barrel export
 │       ├── repositories/ # Data access layer
 │       ├── services/     # Business logic layer
 │       └── index.ts
@@ -202,14 +212,20 @@ tests/                    # Comprehensive test suite
 ## Adding New Features
 
 1. Create a new folder under `src/features/` following the naming convention
-2. Follow the established three-layer architecture:
+2. Follow the established architecture layers:
    - `repositories/` - Data access layer with database operations
    - `services/` - Business logic and validation layer
-   - `controllers/` - HTTP request handlers with proper error handling
-3. Create the main controller export in the feature's `index.ts`
-4. Add the controller to `src/features/index.ts` barrel export
-5. Import and use in `src/index.ts` application setup
-6. Add comprehensive tests for all layers (repository, service, controller)
+   - `routes/` - Modular route organization (split by functionality)
+   - `controllers/` - Main controller that composes routes
+3. For routes organization:
+   - Split routes into logical modules (crud, search, discovery, etc.)
+   - Use descriptive naming: `[feature].[functionality].routes.ts`
+   - Create barrel export in `routes/index.ts`
+   - Compose routes in main controller using `.use()`
+4. Create the main controller export in the feature's `index.ts`
+5. Add the controller to `src/features/index.ts` barrel export
+6. Import and use in `src/index.ts` application setup
+7. Add comprehensive tests for all layers (repository, service, controller)
 
 ### Feature Development Guidelines
 
@@ -219,6 +235,21 @@ tests/                    # Comprehensive test suite
 - Add OpenAPI/Swagger documentation with proper models
 - Write unit and integration tests with good coverage
 - Update relevant documentation
+
+### Route Organization
+
+- **Modular Routes**: Routes are split into logical modules by functionality
+- **Controller Composition**: Main controllers compose routes using Elysia's `.use()`
+- **Clear Naming**: Routes follow `[feature].[functionality].routes.ts` pattern
+- **Barrel Exports**: Each routes directory has an `index.ts` for clean imports
+- **Functional Grouping**: Routes grouped by purpose (CRUD, search, discovery)
+
+#### Route Module Examples
+
+- **CRUD Routes**: Basic operations (GET, POST, PUT, DELETE)
+- **Discovery Routes**: Content discovery (popular, recent, top-rated)
+- **Search Routes**: Search and filtering functionality
+- **Lookup Routes**: Alternative lookup methods (by email, by author)
 
 ## Configuration
 
